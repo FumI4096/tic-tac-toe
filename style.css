@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&display=swap');
+
+:root{
+    --violet-color_1: rgb(111, 29, 143);
+    --violet-color_2: rgb(223, 141, 255);
+    --hover-cell: rgb(198, 126, 226);
+    --active-cell: rgb(174, 111, 199);
+    --restart-button-color: rgb(209, 122, 243);
+    --main-background: linear-gradient(to bottom right, rgb(165, 118, 219) 20%, rgb(148, 103, 189) 100%);
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 911px;
+    background-image: var(--main-background);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    height: auto;
+    width: auto;
+    padding: 2rem 4rem;
+    border-radius: 13px;
+    gap: 1rem;
+    box-shadow: 0px 30px 80px rgba(0, 0, 0, 0.5);
+}
+
+main > aside:nth-child(1){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: auto;
+}
+
+img{
+    height: 120px;
+    width: 120px;
+}
+
+section{
+    width: auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 1rem;
+    row-gap: 1rem;
+    background-color: var(--violet-color_1);
+    border-style: solid;
+    border-width: 1rem;
+    border-color: var(--violet-color_1);
+    border-radius: 8px;
+}
+
+section > div{
+    height: 100px;
+    width: 100px;
+    background-color: var(--violet-color_2);
+    border-radius: 4px;
+    display: grid;
+    place-content: center;
+    font-family: "Righteous", sans-serif;
+    font-size: 2.6rem;
+    transition: 1ms;
+    cursor: pointer;
+}
+
+section > div:hover{
+    background-color: var(--hover-cell);
+}
+
+section > div:active{
+    background-color: var(--active-cell);
+}
+
+main > aside:nth-child(3){
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 1.6rem;
+}
+
+main > aside:nth-child(3) > p{
+    font-family: "Poppins", sans-serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+#restart{
+    width: 8rem;
+    height: auto;
+    padding: 0.7rem 5.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border-style: solid;
+    border-width: 3px;
+    border-color: var(--violet-color_1);
+    border-radius: 100px;
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    box-shadow: 0px 10px 0px var(--violet-color_1);
+
+}
+
+#restart:active{
+    position: relative;
+    top: 10px;
+    box-shadow: 0px 0px 0px var(--violet-color_1);
+}
+
+@media screen and (max-width: 650px) {
+    main{
+        height: auto;
+        width: 80%;
+        padding: 2rem 4rem;
+    }
+    section{
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: center;
+        align-items: center;
+        height: 100%;
+    }
+    section > div{
+        height: 100px;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 600px) {
+
+    main{
+        height: auto;
+        width: 80%;
+        padding: 2rem 2.5rem;
+    }
+    section{
+        
+        justify-items: center;
+        align-items: center;
+        height: 100%;
+    }
+}
